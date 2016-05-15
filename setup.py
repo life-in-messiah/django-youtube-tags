@@ -3,11 +3,11 @@ from setuptools import setup
 
 setup(
     name='django-youtube-tags',
-    version='0.1',
+    version='0.1.1',
     packages=['django-youtube-tags'],
     include_package_data=True,
     license='MIT License',
-    description='Vimeo-related shortcuts for Django',
+    description='Custom Django template tags to simplify embedding Youtube videos and thumbnails',
     url='https://github.com/life-in-messiah/django-youtube-tags',
     download_url = 'https://github.com/life-in-messiah/django-youtube-tags/tarball/0.1',
     author='Joshua Austin',
