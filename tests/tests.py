@@ -14,11 +14,10 @@ class CustomTemplateTagTest(TestCase):
             raise AssertionError("Expected:\n%s\nActual:\n%s" % (expected_output, result))
 
 
-class TestCustomTemplateTagFailure(TestCase):
+class TestCustomTemplateTagTestFailure(CustomTemplateTagTest):
     def test_try(self):
         with self.assertRaises(AssertionError):
-            test_case = CustomTemplateTagTest()
-            test_case._try("something", "something else")
+            self._try("something", "something else")
 
 
 class YouTubeTagTestWithStyle(CustomTemplateTagTest):
