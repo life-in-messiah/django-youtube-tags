@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='django-youtube-tags',
-    version='0.1.1',
+    version='0.2',
     packages=['django-youtube-tags'],
     include_package_data=True,
     license='MIT License',
