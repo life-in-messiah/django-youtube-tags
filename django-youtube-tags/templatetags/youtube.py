@@ -38,12 +38,14 @@ def youtube(video_id, include_style=True):
     return mark_safe((YouTube.style + YouTube.get_embed(video_id)) \
         if include_style else YouTube.get_embed(video_id))
 
-
 @register.simple_tag(name='youtube_style')
 def youtube_style():
     return mark_safe(YouTube.style)
 
-
 @register.simple_tag(name='youtube_embed')
 def youtube_embed(video_id):
     return mark_safe(YouTube.get_embed(video_id))
+
+@register.simple_tag(name='youtube_thumb')
+def youtube_thumb(video_id):
+    return "http://img.youtube.com/vi/{0}/0.jpg".format(video_id)

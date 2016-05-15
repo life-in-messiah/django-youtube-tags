@@ -1,10 +1,12 @@
 # django-youtube-tags  
 
-[![Build Status](https://travis-ci.org/life-in-messiah/django-youtube-tags.svg?branch=master)](https://travis-ci.org/life-in-messiah/django-youtube-tags) [![codecov](https://codecov.io/gh/life-in-messiah/django-youtube-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/life-in-messiah/django-youtube-tags) [![PyPI](https://img.shields.io/pypi/dm/django-youtube-tags.svg)](https://pypi.python.org/pypi/django-youtube-tags/)
-[![Versions Supported](https://img.shields.io/pypi/pyversions/django-youtube-tags.svg)](https://pypi.python.org/pypi/django-youtube-tags/) 
+[![Build Status](https://travis-ci.org/life-in-messiah/django-youtube-tags.svg?branch=master)](https://travis-ci.org/life-in-messiah/django-youtube-tags) [![codecov](https://codecov.io/gh/life-in-messiah/django-youtube-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/life-in-messiah/django-youtube-tags)
+[![Versions Supported](https://img.shields.io/pypi/pyversions/django-youtube-tags.svg)](https://pypi.python.org/pypi/django-youtube-tags/)
 [![PyPI version](https://img.shields.io/pypi/v/django-youtube-tags.svg)](https://pypi.python.org/pypi/django-youtube-tags/)  
 
-Custom Django template tags to simplify embedding Youtube videos and thumbnails
+Custom Django template tags to simplify embedding Youtube videos and thumbnails.  
+
+Uses HTML and CSS code from [Embed Responsively](http://embedresponsively.com/).
 
 # Installation and usage
 Install via `pip`
@@ -38,3 +40,10 @@ Same as `{% youtube %}` with `include_style` set to `False`
 
 ## `{% youtube_style %}`
 Renders needed CSS classes inside a `<style>` tag.
+
+## `{% youtube_thumb video_id %}`
+#### Example:
+```django
+<img alt="Rogue One" src="{% youtube_thumb 'Wji-BZ0oCwg' %}">
+```
+Generates the thumbnail source URI
