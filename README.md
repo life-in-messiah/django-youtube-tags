@@ -7,7 +7,7 @@ Custom Django template tags to simplify embedding Youtube videos and thumbnails
 # Installation and usage
 Install via `pip`
 ```
-$ pip install -u django-youtube-tags
+$ pip install django-youtube-tags
 ```
 or download the source, enter the directory, and
 ```
