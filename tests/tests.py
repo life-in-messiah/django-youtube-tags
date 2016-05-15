@@ -13,8 +13,8 @@ class CustomTemplateTagTest(TestCase):
         if result != expected_output:
             raise AssertionError("Expected:\n%s\nActual:\n%s" % (expected_output, result))
 
-class YouTubeTagTest(CustomTemplateTagTest):
-    def test_tag_with_style(self):
+class YouTubeTagTestWithStyle(CustomTemplateTagTest):
+    def test_tag(self):
         return self._try("{% load youtube %}{% youtube 'Wji-BZ0oCwg' %}", """
             <style>
                 .embed-container {
@@ -39,12 +39,13 @@ class YouTubeTagTest(CustomTemplateTagTest):
                 </iframe>
             </div>""")
 
-        def test_tag_without_style(self):
-            return self._try("{% load youtube %}{% youtube 'Wji-BZ0oCwg' False %}", """
-                <div class='embed-container'>
-                    <iframe src='https://www.youtube.com/embed/Wji-BZ0oCwg' frameborder='0' allowfullscreen>
-                    </iframe>
-                </div>""")
+class YouTubeTagTestWithoutStyle(CustomTemplateTagTest):
+    def test_tag(self):
+        return self._try("{% load youtube %}{% youtube 'Wji-BZ0oCwg' False %}", """
+            <div class='embed-container'>
+                <iframe src='https://www.youtube.com/embed/Wji-BZ0oCwg' frameborder='0' allowfullscreen>
+                </iframe>
+            </div>""")
 
 
 class YouTubeEmbedTagTest(CustomTemplateTagTest):

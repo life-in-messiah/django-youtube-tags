@@ -1,6 +1,6 @@
 # django-youtube-tags  
 
-[![Build Status](https://travis-ci.org/life-in-messiah/django-youtube-tags.svg?branch=master)](https://travis-ci.org/life-in-messiah/django-youtube-tags)  
+[![Build Status](https://travis-ci.org/life-in-messiah/django-youtube-tags.svg?branch=master)](https://travis-ci.org/life-in-messiah/django-youtube-tags) [![codecov](https://codecov.io/gh/life-in-messiah/django-youtube-tags/branch/master/graph/badge.svg)](https://codecov.io/gh/life-in-messiah/django-youtube-tags)  
 
 Custom Django template tags to simplify embedding Youtube videos and thumbnails
 
